@@ -40,7 +40,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-inter">
+    <main className="flex flex-col items-center justify-between h-screen bg-white mt-[-100px] px-4 py-6 font-inter">
       {/* Logo: large stylized initial using gradient text */}
       <Logo />
       {/* Detail section */}
