@@ -8,9 +8,8 @@
 
 /* Root-level color variables used across the app. These switch in the
    dark-mode media query below when the user prefers a dark color scheme. */
-:root {
-  --background: #ffffff;
-  --foreground: white;
+* {
+  background-color: white;
 }
 
 /* Inline theme mapping: small helper variables that map theme values to the

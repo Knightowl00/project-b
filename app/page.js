@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Bottom Navigation: simple nav buttons mapped from an array */}
-      <nav className="flex justify-around w-full mt-6 border-t pt-2">
+      <nav className="flex justify-around w-full mt-6  pt-2">
         {navIcons.map(({ label, icon: Icon }) => (
           <button
             key={label}
