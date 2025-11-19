@@ -1,0 +1,23 @@
+import * as React from "react";
+const SVGComponent = (props) => (
+  <svg
+    width={512}
+    height={512}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <defs>
+      <linearGradient id="mGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#4ade80" />
+        <stop offset="100%" stopColor="#3b82f6" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M64 384V128H160L256 256L352 128H448V384H352V256L256 384L160 256V384H64Z"
+      fill="url(#mGradient)"
+    />
+  </svg>
+);
+export default SVGComponent;
+
