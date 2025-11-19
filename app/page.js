@@ -9,10 +9,16 @@ import { QRCodeCanvas } from "qrcode.react";
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [qrCodeValue, setQrCodeValue] = useState("");
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
-    return () => clearInterval(timer);
+    const interval = setInterval(() => {
+      const now = new Date();
+      setCurrentTime(now);
+      setQrCodeValue(`PASS-${now.toISOString()}`); // 👈 QR updates every 2s
+    }, 2000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const formatTime = (date) =>
@@ -26,17 +32,17 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass mt-[500px]">
+    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass">
       <Logo />
 
       <section className="text-center w-full">
         <div className="flex flex-col items-center mb-4">
-          <p className="text-xl mb-2 text-black font-montserrat">
+          <p className="text-xl mb-2 text-black font-source">
             Scan this code to ride
           </p>
           <div className="w-full h-32 flex items-center justify-center rounded-md">
             <QRCodeCanvas
-              value="DEMO-CODE-123" // placeholder code
+              value={qrCodeValue}
               size={128}
               bgColor="#ffffff"
               fgColor="#000000"
@@ -62,7 +68,7 @@ export default function Home() {
             key={label}
             className="flex flex-col items-center text-xs gap-2 text-gray-600 font-source"
           >
-            <Icon size={25} className="w-6 h-6 mb-1" />
+            <Icon className="w-6 h-6 mb-1" />
             <p>{label}</p>
           </div>
         ))}
