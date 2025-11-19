@@ -26,7 +26,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass mt-100">
+    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass pb-100">
       <Logo />
 
       <section className="text-center w-full">
