@@ -62,7 +62,7 @@ export default function Home() {
             key={label}
             className="flex flex-col items-center text-xs gap-2 text-gray-600 font-source"
           >
-            <Icon className="w-6 h-6 mb-1" />
+            <Icon size={25} className="w-6 h-6 mb-1" />
             <p>{label}</p>
           </div>
         ))}
