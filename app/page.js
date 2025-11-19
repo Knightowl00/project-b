@@ -26,22 +26,21 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass mb-50">
+    <main className="flex flex-col items-center justify-between h-screen bg-white px-4 py-6 font-overpass mt-100">
       <Logo />
 
-      <section className="text-center">
+      <section className="text-center w-full">
         <div className="flex flex-col items-center mb-4">
           <p className="text-xl mb-2 text-black font-source">
             Scan this code to ride
           </p>
-          <div className="w-full h-32 bg-gray-200 flex items-center justify-center rounded-md">
-            {/* ✅ Replace placeholder with QR code */}
+          <div className="w-full h-32 flex items-center justify-center rounded-md">
             <QRCodeCanvas
-              value="DEMO-CODE-123" // 👈 your pass URL or unique code
-              size={128} // size in pixels
+              value="DEMO-CODE-123" // placeholder code
+              size={128}
               bgColor="#ffffff"
               fgColor="#000000"
-              level="H" // error correction level
+              level="H"
             />
           </div>
         </div>
@@ -63,7 +62,7 @@ export default function Home() {
             key={label}
             className="flex flex-col items-center text-xs gap-2 text-gray-600 font-source"
           >
-            <Icon className="w-25 h-25 mb-1" size={25} />
+            <Icon className="w-6 h-6 mb-1" />
             <p>{label}</p>
           </div>
         ))}

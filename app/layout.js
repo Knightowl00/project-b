@@ -24,9 +24,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="min-w-screen min-h-screen relative">
+    <html lang="en">
       <body
-        className={`${overpass.variable} ${sourceSans.variable} ${montserrat.variable} font-sans min-w-full min-h-screen bg-white text-black relative`}
+        className={`${overpass.variable} ${sourceSans.variable} ${montserrat.variable} font-overpass min-w-full min-h-screen bg-white text-black antialiased`}
       >
         {children}
       </body>
