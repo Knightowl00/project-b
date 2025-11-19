@@ -31,7 +31,7 @@ export default function Home() {
 
       <section className="text-center w-full">
         <div className="flex flex-col items-center mb-4">
-          <p className="text-xl mb-2 text-black font-source">
+          <p className="text-xl mb-2 text-black font-montserrat">
             Scan this code to ride
           </p>
           <div className="w-full h-32 flex items-center justify-center rounded-md">

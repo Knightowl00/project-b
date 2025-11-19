@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${overpass.variable} ${sourceSans.variable} ${montserrat.variable} font-overpass min-w-full min-h-screen bg-white text-black antialiased`}
+        className={`${overpass.classNAme} ${sourceSans.className} ${montserrat.className} font-overpass min-w-full min-h-screen bg-white text-black antialiased`}
       >
         {children}
       </body>
