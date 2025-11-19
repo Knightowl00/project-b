@@ -59,13 +59,13 @@ export default function Home() {
 
       <nav className="flex justify-around w-full mt-6 pt-2">
         {navIcons.map(({ label, icon: Icon }) => (
-          <button
+          <div
             key={label}
-            className="flex flex-col items-center text-xs text-gray-600 font-source"
+            className="flex flex-col items-center text-xs gap-2 text-gray-600 font-source"
           >
-            <Icon className="w-10 h-10 mb-1" />
-            {label}
-          </button>
+            <Icon className="w-25 h-25 mb-1" size={25} />
+            <p>{label}</p>
+          </div>
         ))}
       </nav>
     </main>
