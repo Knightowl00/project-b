@@ -37,7 +37,7 @@ export default function Home() {
           <div className="w-32 h-32 bg-gray-200 flex items-center justify-center rounded-md">
             {/* ✅ Replace placeholder with QR code */}
             <QRCodeCanvas
-              value="https://transitpass.app/ride/12345" // 👈 your pass URL or unique code
+              value="DEMO-CODE-123" // 👈 your pass URL or unique code
               size={128} // size in pixels
               bgColor="#ffffff"
               fgColor="#000000"
