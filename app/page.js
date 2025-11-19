@@ -44,7 +44,7 @@ export default function Home() {
       {/* Logo: large stylized initial using gradient text */}
       <Logo />
       {/* Detail section */}
-      <section className="mt-80">
+      <section className="">
         {/* QR Code: visual placeholder for an actual QR code component */}
         <div className="flex flex-col items-center">
           <p className="text-xl mb-2 text-black ">Scan this code to ride</p>
