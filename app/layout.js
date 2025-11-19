@@ -10,9 +10,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en " className="min-w-screen min-h-screen">
+    <html lang="en " className="min-w-screen min-h-screen relative">
       <body
-        className={`${inter.variable} font-sans antialiased min-w-full min-h-screen bg-white text-black`}
+        className={`${inter.variable} font-sans antialiased min-w-full min-h-screen bg-white text-black relative`}
       >
         {children}
       </body>
