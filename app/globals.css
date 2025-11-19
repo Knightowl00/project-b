@@ -25,7 +25,7 @@
 /* Dark mode overrides: when the user prefers dark, invert the root colors. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: white;
     --foreground: #ededed;
   }
 }
