@@ -1,7 +1,21 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Overpass, Source_Sans_3, Montserrat } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// Configure fonts with CSS variables
+const overpass = Overpass({
+  subsets: ["latin"],
+  variable: "--font-overpass",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata = {
   title: "Transit Pass UI",
@@ -10,9 +24,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en " className="min-w-screen min-h-screen relative">
+    <html lang="en" className="min-w-screen min-h-screen relative">
       <body
-        className={`${inter.variable} font-sans antialiased min-w-full min-h-screen bg-white text-black relative`}
+        className={`${overpass.variable} ${sourceSans.variable} ${montserrat.variable} font-sans min-w-full min-h-screen bg-white text-black relative`}
       >
         {children}
       </body>
