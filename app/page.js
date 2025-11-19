@@ -34,7 +34,7 @@ export default function Home() {
           <p className="text-xl mb-2 text-black font-source">
             Scan this code to ride
           </p>
-          <div className="w-32 h-32 bg-gray-200 flex items-center justify-center rounded-md">
+          <div className="w-full h-32 bg-gray-200 flex items-center justify-center rounded-md">
             {/* ✅ Replace placeholder with QR code */}
             <QRCodeCanvas
               value="DEMO-CODE-123" // 👈 your pass URL or unique code
