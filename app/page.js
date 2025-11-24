@@ -25,6 +25,12 @@ export default function Home() {
     date.toLocaleTimeString("en-US", { hour12: true });
   const formatDay = (date) =>
     date.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
+  const formatDate = (date) => date.toLocaleDateString("en-US");
+
+  const EXPIRATION_MINUTES = 30;
+  const expirationTime = new Date(
+    currentTime.getTime() + EXPIRATION_MINUTES * 60 * 1000
+  );
 
   const navIcons = [
     { label: "HOME", icon: IoHomeOutline },
@@ -60,7 +66,8 @@ export default function Home() {
           Current Time <br /> {formatTime(currentTime)}
         </h2>
         <h2 className="text-3xl mt-2 font-overpass">
-          Expires: 10/10/2025 <br /> 5:26:08 PM
+          Expires: {formatDate(expirationTime)} <br />{" "}
+          {formatTime(expirationTime)}
         </h2>
       </section>
 
