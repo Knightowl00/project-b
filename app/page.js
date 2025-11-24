@@ -23,6 +23,8 @@ export default function Home() {
 
   const formatTime = (date) =>
     date.toLocaleTimeString("en-US", { hour12: true });
+  const formatDay = (date) =>
+    date.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
 
   const navIcons = [
     { label: "HOME", icon: IoHomeOutline },
@@ -52,7 +54,7 @@ export default function Home() {
         </div>
 
         <h2 className="text-4xl text-lime-500 font-extrabold font-montserrat">
-          FRIDAY 10
+          {formatDay(currentTime)}
         </h2>
         <h2 className="text-3xl font-source mt-2">
           Current Time <br /> {formatTime(currentTime)}
